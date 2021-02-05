@@ -4,8 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'echo "hello world" > t.txt'
-                sh 'cat t.txt'
+                sh 'echo "hello world" > t1.txt'
+                sh 'cat t1.txt'
             }
         }
         stage("Deploy") {
