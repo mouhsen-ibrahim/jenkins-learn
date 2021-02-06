@@ -6,16 +6,14 @@ pipeline {
                 sh 'python --version'
                 sh 'echo "hello world" > t1.txt'
                 sh 'cat t1.txt'
-            }
-        }
-        stage("Deploy") {
-            retry (3) {
+                retry (3) {
                     sh 'echo hello world'
                 }
 
                 timeout(time: 1, unit: 'MINUTES') {
                     sh 'echo "Wait 1 minute"'
                 }
+            }
         }
     }
     post {
