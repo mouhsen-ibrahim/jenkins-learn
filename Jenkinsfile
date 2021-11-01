@@ -1,5 +1,5 @@
 pipeline {
-    agent { kubernetes { image 'python:3.5.1' } }
+    agent { kubernetes {  } }
     stages {
         stage('build') {
             steps {
