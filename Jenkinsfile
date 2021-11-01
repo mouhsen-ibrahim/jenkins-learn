@@ -6,6 +6,7 @@ pipeline {
                 sh 'python --version'
                 sh 'echo "hello world" > t1.txt'
                 sh 'cat t1.txt'
+                sh 'git log'
                 retry (3) {
                     sh 'echo hello world'
                 }
